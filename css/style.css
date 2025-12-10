@@ -480,13 +480,12 @@ html { scroll-behavior: smooth; }
 }
 
 /* 幻燈片 */
-.auto-hero{ position:relative; height: clamp(260px, 45w, 700px); overflow:hidden; }
+.auto-hero{ position:relative; height: clamp(260px, 45vw, 700px); overflow:hidden; }
 .auto-hero .slide{
   position:absolute; inset:0;
-  width:100%; height:100%;
-  object-fit:cover;
+  width:100%; height:100%; object-fit:cover;
   opacity:0;
-  animation: heroFade 25s infinite ease-in-out;
+  animation: heroFade 24s linear infinite both;
 }
 
 /* 每張錯開時間 */
@@ -498,11 +497,11 @@ html { scroll-behavior: smooth; }
 .auto-hero .slide:nth-child(6){ animation-delay: 20s; }
 
 @keyframes heroFade{
-  0%   { opacity:0; }
-  6%   { opacity:1; }   /* 淡入 */
-  33%  { opacity:1; }   /* 停留 */
-  39%  { opacity:0; }   /* 淡出 */
-  100% { opacity:0; }
+  0%   { opacity: 0; }
+  2%   { opacity: 1; }   /* ~0.48s 淡入 */
+  16%  { opacity: 1; }   /* 到 3.84s 保持亮（接近 4s） */
+  20%  { opacity: 0; }   /* ~0.48s 淡出 */
+  100% { opacity: 0; }
 }
 
 /* 右側微暗漸層（讓文字更清楚） */
@@ -821,4 +820,5 @@ body{
 
 /*（選用）開啟時鎖住整頁滾動，配合你的 JS open/close */
 html.dd-lock, body.dd-lock{ overflow:hidden; }
+
 
