@@ -489,7 +489,7 @@ html { scroll-behavior: smooth; }
   0%   { opacity: 0; }
   2%   { opacity: 1; }   /* ~0.48s 淡入 */
   16%  { opacity: 1; }   /* 到 3.84s 保持亮（接近 4s） */
-  20%  { opacity: 0; }   /* ~0.48s 淡出 */
+  18%  { opacity: 0; }   /* ~0.48s 淡出 */
   100% { opacity: 0; }
 }
 
@@ -793,4 +793,5 @@ body{
 
 /*（選用）開啟時鎖住整頁滾動，配合你的 JS open/close */
 html.dd-lock, body.dd-lock{ overflow:hidden; }
+
 
